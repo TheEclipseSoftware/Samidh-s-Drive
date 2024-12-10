@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samidh's Drive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-page" class="login-page">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button id="login-btn">Login</button>
+  </div>
+
+  <div id="app" style="display: none;">
+    <header class="header">
+      <div class="logo">Samidh's Drive</div>
+      <div class="account-info">
+        <span id="storage-info">Unlimited Storage</span>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="upload-section">
+        <h2>Upload Files or Folders</h2>
+        <label for="file-upload" class="upload-btn">Choose File</label>
+        <input type="file" id="file-upload" multiple hidden>
+        <label for="folder-upload" class="upload-btn">Choose Folder</label>
+        <input type="file" id="folder-upload" webkitdirectory multiple hidden>
+        <button id="upload-files">Upload</button>
+      </section>
+
+      <section class="files-section">
+        <h2>Your Uploaded Files and Folders</h2>
+        <div id="file-list" class="file-list"></div>
+      </section>
+
+      <section id="folder-content" class="folder-content" style="display: none;">
+        <h2>Folder Content</h2>
+        <div id="folder-images"></div>
+        <button id="back-btn">Back</button>
+      </section>
+    </main>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="fullscreen-modal" class="fullscreen-modal" style="display: none;">
+      <div class="fullscreen-modal-content">
+        <img id="fullscreen-img" src="" alt="Full Screen" />
+        <button id="close-btn" class="resize-btn">Close</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Samidh's Drive. Powered by ItzFlickShot_</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
